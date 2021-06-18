@@ -61,7 +61,7 @@ export default {
         'email': this.email
       }
       axios.post('http://localhost:5000/user', json)
-        .try(data => {
+        .then(data => {
           if (data.data.hasOwnProperty('name')) {
             localStorage.client_id = data.data.id
             this.$router.push('dashboard')
@@ -70,9 +70,6 @@ export default {
             this.error_msg = 'Asegúrese de llenar debidamente su información, es posible que ya se encuentre regisatrado'
             console.log(this.error_msg)
           }
-        }).catch(data => {
-          this.error_msg = 'Asegúrese de llenar debidamente su información, es posible que ya se encuentre regisatrado'
-          console.log(this.error_msg)
         })
     }
   }
