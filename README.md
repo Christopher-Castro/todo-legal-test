@@ -22,7 +22,7 @@ npm install
 ## Build
 
 
-Since flash (back-end) is rendering the project made in Vue.js (front-end), it is necessary to carry out a construction of said project; all this in order to just initialize the flask service instead of initializing the flask and Vue services separately.
+Since flask (back-end) is rendering the project made in Vue.js (front-end), it is necessary to carry out a construction of said project; all this in order to just initialize the flask service instead of initializing the flask and Vue services separately.
 
 ```bash
 
