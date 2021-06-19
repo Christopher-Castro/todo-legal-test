@@ -38,6 +38,10 @@ Initialize the flask service
 python3 ./app.py
 ```
 
+## MySQL Database
+
+This application uses sqlAlchemy to query a database named "flaskmysql". Just create the database and flask will be in charge of defining the tables to be used.
+
 ## AWS deploy example
 
 
