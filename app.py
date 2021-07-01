@@ -11,8 +11,8 @@ app = Flask(__name__,
             template_folder='./frontend/dist')
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/flaskmysql'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:example@db/flaskmysql'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/flaskmysql'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 

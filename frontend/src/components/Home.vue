@@ -60,7 +60,8 @@ export default {
   },
   methods: {
     getUser () {
-      const path = 'http://localhost:5000/home'
+      // const path = 'http://localhost:5000/home'
+      const path = 'http://flask:5000/home'
       axios.get(path).then((respuesta) => {
         this.mensaje = respuesta.data
         console.log(respuesta.data)
@@ -73,7 +74,8 @@ export default {
         'username': this.usuario,
         'password': this.password
       }
-      axios.post('http://localhost:5000/auth/login', json)
+      // axios.post('http://localhost:5000/auth/login', json)
+      axios.post('http://flask:5000/auth/login', json)
         .then(data => {
           if (data.data.state === true) {
             localStorage.client_id = data.data.id

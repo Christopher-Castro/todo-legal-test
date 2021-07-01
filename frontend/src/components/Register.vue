@@ -60,7 +60,8 @@ export default {
         'phone_number': this.phone,
         'email': this.email
       }
-      axios.post('http://localhost:5000/user', json)
+      // axios.post('http://localhost:5000/user', json)
+      axios.post('http://flask:5000/user', json)
         .then(data => {
           if (data.data.hasOwnProperty('name')) {
             localStorage.client_id = data.data.id
